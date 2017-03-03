@@ -1,0 +1,28 @@
+.header {
+  height: 280px;
+  @include jb($blue,$green,45);
+  .logo {
+    font-size: 48px;text-align: center;line-height: 240px;
+    text-shadow: 1px 1px 2px $c55;
+    a {color: $cff;opacity: .8;}
+  }
+}
+.menu {
+  width: 970px;margin: -40px auto 20px;background: rgba($cff,.5);
+  border-radius: 5px 5px 0 0;height: 40px;padding: 0 5px;
+  ul {
+    display: table;width: 100%;table-layout: fixed;text-align: center;
+    li {display: table-cell;}
+    a {
+      height: 40px;display: block;line-height: 40px;font-size: 13px;color: $cff;padding-top: 5px;margin-top: -5px;
+      text-shadow: 1px 1px 1px $c55;border-radius: 3px 3px 0 0;
+      &:hover {
+        color: $elblack;background: $cff;font-size: 14px;line-height: 35px;font-weight: bold;
+        text-shadow: 1px 1px 1px $c99;
+      }
+    }
+  }
+}
+.main {
+  width: 940px;margin: 0 auto;background: $cff;padding: 20px;border-radius: 5px;box-shadow: 0 0 5px $cdd inset;
+}
