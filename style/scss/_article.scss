@@ -1,0 +1,98 @@
+.article_list {
+  ul {}
+  li {
+    margin-top: 20px;padding-bottom: 20px;
+    &:not(:last-child) {border-bottom: 1px dashed $cdd;}
+    a {
+      display: block;@extend .cf;border-radius: 1px;
+      img {
+        display: block;height: 120px;float: left;margin-right: 20px;
+        border-radius: 5px;box-shadow: 0 0 0 2px $cff, 3px 3px 5px $cdd;
+      }
+      h3 {
+        font-size: 15px;color: $black;margin-top: -5px;
+        @include online(30px);
+      }
+      time,strong {
+        display: inline-block;color: $cff;padding:4px 6px;border-radius: 3px;
+        box-shadow: 0 0 4px rgba($c22,.3) inset;font-size: 12px;
+      }
+      time {
+        background: $c99;
+      }
+      strong {
+        background: mix($green,$blue);
+      }
+      p {
+        height: 72px;line-height: 24px;overflow: hidden;margin-top: 5px;color: $c99;font-size: 13px;
+      }
+      &:hover {
+        // background: $elgray;
+        box-shadow:0 0 0 8px $cff, 0 0 10px 10px $elgray;
+      }
+    }
+  }
+}
+
+.article_page {
+  .article_title {
+    line-height: 1.6;font-size: 24px;color: $black;text-align: center;padding: 10px 0;
+  }
+  .article_info {
+    text-align: center;background: $elgray;line-height: 2;color: $lsilver;
+  }
+  .article_content {
+    line-height: 1.8;
+    @for $i from 1 through 6 {
+      h#{$i} {
+         font-size: 26px - $i*2;
+      }
+    }
+    h1,h2,h3,h4,h5,h6 {
+      border-bottom: 1px solid $gray;color: $elblack;padding: 5px 0;margin: 10px 0;
+    }
+    p {
+      font-size: 14px;margin-bottom: 10px;
+    }
+    code {
+      padding: 4px 4px 2px;font-size: 12px;border-radius: 3px;margin: auto 2px;
+      font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      background: $elgray;box-shadow: 1px 1px 3px $gray inset;
+    }
+    pre {
+      word-wrap: normal;padding: 15px;background: $elgray;margin: 10px 0;
+      box-shadow: 1px 1px 3px $gray inset;line-height: 1.45;
+      code {box-shadow: none;}
+    }
+    a {
+      color: darken($blue,20%);
+      &:hover {
+        color: $green;
+      }
+    }
+    img {
+      max-width: 95%;margin: 10px 0;border-radius: 5px;
+      box-shadow: 0 0 0 3px $cff, 1px 1px 10px $c55;
+    }
+    strong {
+      font-weight: bold;color: $black;margin: auto 2px;
+    }
+    blockquote {
+      border-left: 5px solid $gray;padding:8px 15px;background: $cf9;margin: 10px auto;
+    }
+    table {
+      width: 100%;margin: 10px 0;
+      &,th,td {border: 1px solid $gray;}
+      th,td {padding: 6px 12px;font-size: 16px;}
+      th {
+        background: $lgray;color: $lblack;
+      }
+      tr:nth-child(2n) {
+        background: $cf9;
+      }
+    }
+  }
+  .article_more {
+    line-height: 2;font-size: 15px;border-top: 1px solid $gray;padding-top: 5px;
+  }
+}
